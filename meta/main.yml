@@ -1,0 +1,36 @@
+galaxy_info:
+  role_name: inventory-known-hosts
+  author: Klaas_
+  description: Module to easily add ssh host keys to known hosts file
+  license: GPLv3
+  min_ansible_version: 1.9
+  platforms:
+  - name: Debian
+    versions:
+    - wheezy
+    - jessie
+    - stretch
+  - name: Ubuntu
+    versions:
+    - precise
+    - trusty
+    - xenial
+    - bionic
+  - name: Fedora
+    versions:
+    - all
+  - name: EL
+    versions:
+    - 6
+    - 7
+    - 8
+  - name: GenericBSD
+    versions:
+    - any
+  - name: GenericLinux
+    versions:
+    - any
+  - name: GenericUNIX
+    versions:
+    - any
+  galaxy_tags: [ 'system', 'networking' ]

@@ -1,0 +1,6 @@
+---
+# tasks file for ansible-role-known-hosts
+- known_hosts:
+    name: "{{ item }}"
+    key: "{{ lookup('pipe', 'ssh-keyscan {{ item }},$(dig +short {{ item }}|sort|paste -s -d ,)') }}"
+  with_items: "{{ inventory_known_hosts }}"
