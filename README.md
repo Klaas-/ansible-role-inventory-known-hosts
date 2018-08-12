@@ -1,14 +1,14 @@
 Ansible Role: Inventory known hosts
 =========
 
-[![Build Status](https://travis-ci.org/Klaas-/ansible-role-inventory-known-hosts.svg?branch=master)](https://travis-ci.org/Klaas-/ansible-role-inventory-known-hosts)
-
 This role is meant to add the ssh host keys to the local known hosts file. WARNING: This enables man-in-the-middle attacks if you do not properly verify the keys out of band.
 
 Requirements
 ------------
 
-Ansible 1.9+
+* Ansible 1.9+
+* openssh-clients (ssh-keyscan)
+* bind-utils (dig)
 
 Role Variables
 --------------
@@ -29,7 +29,7 @@ Example Playbook
 
 This is a basic example for all hosts in inventory:
 
-    - hosts: all
+    - hosts: localhost
       connection: local
       roles:
          - ansible-role-inventory-known-hosts
